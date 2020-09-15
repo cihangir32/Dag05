@@ -62,4 +62,52 @@ public class JavaTestDag05 {
         double cijfer2 = 0.0;
         System.out.println(cijfer1 / cijfer2);
     }
+
+    @Test // Annotatie
+    void HalveDriehoekMetSterren() {
+        for (int i = 1; i < 10; i += 2) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("-");
+            }
+            System.out.println("");
+        }
+    }
+
+    @Test // Annotatie
+    void DriehoekMetSterren(){
+        for (int i=1; i<10; i += 2)
+        {
+            for (int k=0; k < (4 - i / 2); k++)
+            {
+                System.out.print(" ");
+            }
+            for (int j=0; j<i; j++)
+            {
+                System.out.print("'");
+            }
+            System.out.println("");
+        }
+    }
+
+    @Test // Annotatie
+    void OmgekeerdeHalveDriehoek() {
+        for (int i = 1; i < 10; i += 2) {
+            for (int j = 10; j > i; j--) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
