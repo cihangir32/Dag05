@@ -35,7 +35,7 @@ public class EersteDriehoekBasisBoven {
 
     @Test
     void driehoekBasisBovenNetjesAfgewerktMetMethodesEtc(){
-        int lengteDriehoeksBasis = 10;
+        int lengteDriehoeksBasis = 11;
         int decrement = lengteDriehoeksBasis;
         int driehoekRij = 0;
 

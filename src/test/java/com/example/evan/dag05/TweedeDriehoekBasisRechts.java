@@ -2,7 +2,7 @@ package com.example.evan.dag05;
 
 import org.junit.jupiter.api.Test;
 
-public class tweedeDriehoekBasisRechts {
+public class TweedeDriehoekBasisRechts {
 
     @Test
     void driehoekMetBasisRechterZijde() {
@@ -27,11 +27,14 @@ public class tweedeDriehoekBasisRechts {
         }
 
         incrementSpaties = 5;
-        sterrenOpEenRij = hoogteDriehoek -1;
+        sterrenOpEenRij = 0;
         int decrementSpaties = 5;
 
         while (sterrenOpEenRij < hoogteDriehoek) {
 
+            for (int j = 0; sterrenOpEenRij > j; j++ ){
+                System.out.print(" ");
+            }
             for (int i = incrementSpaties;i > 0; i--) {
                 System.out.print("*");
             }
