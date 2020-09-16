@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
 
-public class EvansDriehoeken {
+public class EersteDriehoekBasisBoven {
 
     @Test
     void test(){
@@ -30,11 +30,7 @@ public class EvansDriehoeken {
             basis = basis -2;
             i = i-2;
             driehoekRij = driehoekRij + 1;
-
-
         }
-
-
     }
 
     @Test
