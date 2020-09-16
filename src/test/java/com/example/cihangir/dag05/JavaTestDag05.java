@@ -51,7 +51,79 @@ public class JavaTestDag05 {
         }
     }
 
+    // Huiswerkopdracht 3&4
+    @Test
+    void driehoekMetBasisBoven(){
+        int lengteDriehoeksBasis = 11;
+        int decrement = lengteDriehoeksBasis;
+        int driehoekRij = 0;
 
+        while(decrement > 0) {
+            plaatsenVanSpatiesVoorElkeDriehoekRij(driehoekRij);
+
+            driehoekVullenMetSterren(lengteDriehoeksBasis);
+
+            System.out.println("");
+            lengteDriehoeksBasis = lengteDriehoeksBasis - 2;
+            decrement = decrement - 2;
+            driehoekRij = driehoekRij + 1;
+        }
+    }
+
+    void plaatsenVanSpatiesVoorElkeDriehoekRij(int driehoekRij){
+        for(int q = 0; driehoekRij > q; q++){
+            System.out.print(" ");
+        }
+    }
+
+    void driehoekVullenMetSterren(int basis){
+        for(int j = 0; j < basis; j++){
+            System.out.print("*");
+        }
+    }
+
+    @Test
+    void driehoekMetBasisRechterZijde() {
+
+        int hoogteDriehoek = 5;
+        int incrementSpaties = hoogteDriehoek - 1;
+        int sterrenOpEenRij = 1;
+
+        while (sterrenOpEenRij < hoogteDriehoek) {
+
+            for (int i = incrementSpaties;i > 0; i--) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < sterrenOpEenRij ; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+
+            sterrenOpEenRij = sterrenOpEenRij + 1;
+            incrementSpaties = incrementSpaties -1;
+
+        }
+
+        incrementSpaties = 5;
+        sterrenOpEenRij = 0;
+        int decrementSpaties = 5;
+
+        while (sterrenOpEenRij < hoogteDriehoek) {
+
+            for (int j = 0; sterrenOpEenRij > j; j++ ){
+                System.out.print(" ");
+            }
+            for (int i = incrementSpaties;i > 0; i--) {
+                System.out.print("*");
+            }
+
+            System.out.println("");
+
+            sterrenOpEenRij = sterrenOpEenRij + 1;
+            incrementSpaties = incrementSpaties - 1;
+            decrementSpaties = decrementSpaties -1;
+        }
+    }
 
 
 
