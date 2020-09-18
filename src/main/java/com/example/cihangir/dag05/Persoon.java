@@ -1,22 +1,25 @@
 package com.example.cihangir.dag05;
 
 public class Persoon {
-    private int id;
     private String naam;
     private int leeftijd;
 
-    public Persoon(int id, String naam, int leeftijd) {
-        this.id = id;
+    public Persoon(String naam, int leeftijd) {
         this.naam = naam;
         this.leeftijd = leeftijd;
     }
 
-    public int getId() {
-        return id;
+    public Persoon(int id, String naam) {
+        this.naam = naam;
+        this.leeftijd = 18;
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+    public String toString1() {
+        return "Persoon{" +
+                "naam='" + naam + '\'' +
+                ", leeftijd=" + leeftijd +
+                '}';
     }
 
     public String getNaam() {

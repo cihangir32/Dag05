@@ -13,20 +13,39 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaTestDag05 {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test // OOP test 17-9
     void PersoonTest() {
-        Persoon persoon = new Persoon(0, "Cihangir", 18);
-        System.out.println("Id: " + persoon.getId());
+        Persoon persoon = new Persoon("Cihangir", 18);
         System.out.println("Naam: " + persoon.getNaam());
-        System.out.println("Leeftijd: " + persoon.getLeeftijd());
+        System.out.println("Leeftijd: " + persoon.getLeeftijd());;
+        System.out.println(persoon.toString1());
         }
-
-
-
-
-
-
-
 
 
 
