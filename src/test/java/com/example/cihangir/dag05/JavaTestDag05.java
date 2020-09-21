@@ -13,19 +13,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaTestDag05 {
 
+    @Test // OOP test 17-9
+    void HuiswerkTest() {
+        Persoon persoon = new Persoon("Cihangir", 18);
 
+        System.out.println("Naam: " + persoon.getNaam());
+        System.out.println("Leeftijd: " + persoon.getLeeftijd());;
+        System.out.println(persoon.toStringPersoon());
+    }
 
+    @Test // OOP test 17-9
+    void HuiswerkTest2() {
+        Adres adres = new Adres("Amersfoort", "Kruisstraat",2, "Nederland" );
 
-
-
-
-
-
-
-
-
-
-
+        System.out.println("Woonplaats: " + adres.getWoonplaats());
+        System.out.println("Straat: " + adres.getStraat());;
+        System.out.println("nummer: " + adres.getNummer());
+        System.out.println("land: " + adres.getLand());;
+        System.out.println(adres.toStringAdres());
+    }
 
 
 
@@ -44,7 +50,7 @@ public class JavaTestDag05 {
         Persoon persoon = new Persoon("Cihangir", 18);
         System.out.println("Naam: " + persoon.getNaam());
         System.out.println("Leeftijd: " + persoon.getLeeftijd());;
-        System.out.println(persoon.toString1());
+        System.out.println(persoon.toStringPersoon());
         }
 
 
