@@ -9,19 +9,6 @@ public class Persoon {
         this.leeftijd = leeftijd;
     }
 
-    public Persoon(int id, String naam) {
-        this.naam = naam;
-        this.leeftijd = 18;
-    }
-
-
-    public String toStringPersoon() {
-        return "Persoon{" +
-                "naam='" + naam + '\'' +
-                ", leeftijd=" + leeftijd +
-                '}';
-    }
-
     // Getters en Setters
     public String getNaam() {
         return naam;
@@ -37,6 +24,13 @@ public class Persoon {
 
     public void setLeeftijd(int leeftijd) {
         this.leeftijd = leeftijd;
+    }
+
+    public String toStringPersoon() {
+        return "Persoon{" +
+                "naam='" + naam + '\'' +
+                ", leeftijd=" + leeftijd +
+                '}';
     }
 }
 

@@ -14,7 +14,6 @@ public class Adres {
     }
 
 
-
     // Getters en Setters
     public String getWoonplaats() {
         return woonplaats;
@@ -47,6 +46,7 @@ public class Adres {
     public void setLand(String land) {
         this.land = land;
     }
+
 
     public String toStringAdres() {
         return "Adres{" +

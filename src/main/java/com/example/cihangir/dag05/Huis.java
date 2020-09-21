@@ -11,7 +11,6 @@ public class Huis {
     }
 
     // Getters en Setters
-
     public int getAantalKamers() {
         return aantalKamers;
     }
