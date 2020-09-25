@@ -1,6 +1,7 @@
 package com.example.cihangir.dag05;
 
 public class Persoon {
+
     private String naam;
     private int leeftijd;
 

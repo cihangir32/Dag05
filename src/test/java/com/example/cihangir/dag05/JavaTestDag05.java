@@ -5,6 +5,9 @@ import org.assertj.core.data.Offset;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -12,6 +15,26 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class JavaTestDag05 {
+
+
+    @Test
+    void TestDate() { // Dit print de huidige datum uit naar de console
+        LocalDate localedatum = LocalDate.now();
+        System.out.println(localedatum);
+    }
+
+    @Test
+    void TestDate2() { // Dit print de huidige tijd uit naar de console
+        LocalTime localetijd = LocalTime.now();
+        System.out.println(localetijd);
+    }
+
+    @Test
+    void TestDate3() { // Dit print de huidige datum en tijd uit naar de console
+        LocalDateTime datumTijd = LocalDateTime.now();
+        System.out.println(datumTijd);
+    }
+
 
     @Test // OOP test 17-9
     void HuiswerkTest() {
@@ -32,18 +55,6 @@ public class JavaTestDag05 {
         System.out.println("land: " + adres.getLand());;
         System.out.println(adres.toStringAdres());
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Test // OOP test 17-9
     void PersoonTest() {
@@ -167,7 +178,6 @@ public class JavaTestDag05 {
             decrementSpaties = decrementSpaties -1;
         }
     }
-
 
 
     // Verschillende tests
