@@ -5,9 +5,11 @@ import org.assertj.core.data.Offset;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
+import java.time.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.temporal.TemporalAmount;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -15,6 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class JavaTestDag05 {
+
 
 
     @Test
@@ -34,6 +37,66 @@ public class JavaTestDag05 {
         LocalDateTime datumTijd = LocalDateTime.now();
         System.out.println(datumTijd);
     }
+
+
+
+
+
+
+    @Test
+    void eersteTestMetDate(){
+        LocalDateTime eenTestDatum = LocalDateTime.of(2012,3,4,3,2);
+        LocalTime HoeLaatIsHet = eenTestDatum.toLocalTime();
+        System.out.println(eenTestDatum);
+        System.out.println(HoeLaatIsHet);
+    }
+
+    @Test
+    void testenMetZelfdeTijdVerschillendeDatum(){
+        LocalDateTime eenTestDatum = LocalDateTime.of(2012,3,4,3,2);
+        LocalTime hoeLaatKomtReservering = eenTestDatum.toLocalTime();
+        LocalDateTime eenTweedeTestDatum = LocalDateTime.of(2015,4,4,3,2);
+        LocalTime hoeLaatKomtTweedeReservering = eenTweedeTestDatum.toLocalTime();
+        if(hoeLaatKomtReservering.equals(hoeLaatKomtTweedeReservering)){
+            System.out.println("Zelfde tijd, kan niet reserveren! Maar hebben we de datum gechecked?");
+        }
+        else{
+            System.out.println("Kan reserveren.");
+        }
+    }
+
+    @Test
+    void assertThatLocalDateTimeZelfGemaakt(){
+        LocalDate datumVandaag = LocalDate.now();
+        LocalTime tijdNu = LocalTime.now();
+        LocalDateTime datumVandaagEnTijdNu = LocalDateTime.of(datumVandaag, tijdNu);
+        LocalDateTime localDateTime = LocalDateTime.now();
+
+        assertThat(datumVandaagEnTijdNu).isEqualTo(localDateTime);
+    }
+
+
+
+
+    @Test
+    void LocalDateTimeDagenToevoegen(){
+        LocalDateTime eenTestDatum = LocalDateTime.of(2012,3,4,3,2);
+        LocalDateTime deNieuweDatum
+                = eenTestDatum.plus(Period.ofDays(10));
+        System.out.println(deNieuweDatum);
+    }
+
+    @Test
+    void testPlusHours(){
+        LocalDateTime eenTestDatum = LocalDateTime.of(2012,3,4,3,2);
+        eenTestDatum = eenTestDatum.plusHours(3L);
+        System.out.println(eenTestDatum);
+    }
+
+
+
+
+
 
 
     @Test // OOP test 17-9
@@ -63,6 +126,7 @@ public class JavaTestDag05 {
         System.out.println("Leeftijd: " + persoon.getLeeftijd());;
         System.out.println(persoon.toStringPersoon());
         }
+
 
 
 
