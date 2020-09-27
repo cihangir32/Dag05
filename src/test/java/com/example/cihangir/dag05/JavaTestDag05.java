@@ -4,43 +4,41 @@ import com.example.cihangir.dag05.Persoon;
 import org.assertj.core.data.Offset;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
-
 import java.time.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.temporal.TemporalAmount;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.IntStream;
 import static org.assertj.core.api.Assertions.assertThat;
+
 
 
 public class JavaTestDag05 {
 
 
 
+
+
+
+
+    // Dit print de huidige datum uit naar de console
     @Test
-    void TestDate() { // Dit print de huidige datum uit naar de console
+    void printLocaleDatum() {
         LocalDate localedatum = LocalDate.now();
         System.out.println(localedatum);
     }
 
+    // Dit print de huidige tijd uit naar de console
     @Test
-    void TestDate2() { // Dit print de huidige tijd uit naar de console
+    void printLocaleTijd() {
         LocalTime localetijd = LocalTime.now();
         System.out.println(localetijd);
     }
 
+    // Dit print de huidige datum en tijd uit naar de console
     @Test
-    void TestDate3() { // Dit print de huidige datum en tijd uit naar de console
+    void printLocaleTijdEnDatum() {
         LocalDateTime datumTijd = LocalDateTime.now();
         System.out.println(datumTijd);
     }
-
-
-
-
 
 
     @Test
@@ -69,8 +67,12 @@ public class JavaTestDag05 {
     void assertThatLocalDateTimeZelfGemaakt(){
         LocalDate datumVandaag = LocalDate.now();
         LocalTime tijdNu = LocalTime.now();
+
         LocalDateTime datumVandaagEnTijdNu = LocalDateTime.of(datumVandaag, tijdNu);
         LocalDateTime localDateTime = LocalDateTime.now();
+
+        System.out.println(LocalDateTime.now());
+        System.out.println(LocalDateTime.of(datumVandaag, tijdNu));
 
         assertThat(datumVandaagEnTijdNu).isEqualTo(localDateTime);
     }
@@ -78,11 +80,13 @@ public class JavaTestDag05 {
 
 
 
+
+
     @Test
     void LocalDateTimeDagenToevoegen(){
         LocalDateTime eenTestDatum = LocalDateTime.of(2012,3,4,3,2);
-        LocalDateTime deNieuweDatum
-                = eenTestDatum.plus(Period.ofDays(10));
+        LocalDateTime deNieuweDatum = eenTestDatum.plus(Period.ofDays(10));
+        deNieuweDatum = eenTestDatum.plusDays(10);
         System.out.println(deNieuweDatum);
     }
 
@@ -92,6 +96,16 @@ public class JavaTestDag05 {
         eenTestDatum = eenTestDatum.plusHours(3L);
         System.out.println(eenTestDatum);
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
